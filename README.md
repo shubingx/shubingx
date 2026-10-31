@@ -1,4 +1,3 @@
-<div align="center"><img src="./assets/potato.svg" width="360" alt="A little animated pixel hash brown" />Hi, I'm ShuBing! 🍟
 Developer in progress · CTF learner · Open-source explorer
 
 <sub>Just a little hash brown building cool things, one commit at a time.</sub>

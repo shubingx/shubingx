@@ -1,0 +1,8 @@
+
+- name: Generate caramel-colored snake
+  uses: Platane/snk/svg-only@v3
+  with:
+    github_user_name: ${{ github.repository_owner }}
+    outputs: |
+      dist/snake.svg?color_snake=%23e6a04d&color_dots=%23fff9eb,%23f9e6bc,%23f3d08f,%23e9b464,%23be7b35
+      dist/snake-dark.svg?color_snake=%23ffd17b&color_dots=%23252423,%23634a30,%239b6d3b,%23d49b54,%23ffe2a1
