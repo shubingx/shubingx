@@ -1,8 +1,35 @@
 
-- name: Generate caramel-colored snake
-  uses: Platane/snk/svg-only@v3
-  with:
-    github_user_name: ${{ github.repository_owner }}
-    outputs: |
-      dist/snake.svg?color_snake=%23e6a04d&color_dots=%23fff9eb,%23f9e6bc,%23f3d08f,%23e9b464,%23be7b35
-      dist/snake-dark.svg?color_snake=%23ffd17b&color_dots=%23252423,%23634a30,%239b6d3b,%23d49b54,%23ffe2a1
+name: Generate contribution snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate caramel-colored snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=%23e6a04d&color_dots=%23fff9eb,%23f9e6bc,%23f3d08f,%23e9b464,%23be7b35
+            dist/snake-dark.svg?color_snake=%23ffd17b&color_dots=%23252423,%23634a30,%239b6d3b,%23d49b54,%23ffe2a1
+
+      - name: Publish snake animations
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
