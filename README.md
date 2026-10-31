@@ -24,9 +24,9 @@ CTF & Networking	Learning security and networking through practice
 
 🍟 My contributions are being eaten!
 <div align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sony353460-debug/sony353460-debug/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sony353460-debug/sony353460-debug/output/snake.svg" />
-  <img alt="Snake animation eating my GitHub contributions" src="https://raw.githubusercontent.com/sony353460-debug/sony353460-debug/output/snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/shubingx/shubingx/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/shubingx/shubingx/output/snake.svg" />
+  <img alt="Snake animation eating my GitHub contributions" src="https://raw.githubusercontent.com/shubingx/shubingx/output/snake.svg" />
 </picture><sub>Powered by GitHub Actions · Rebuilt daily</sub>
 </div><div align="center">Thanks for dropping by! ✨
 
